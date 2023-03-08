@@ -95,12 +95,12 @@ function App() {
         // update the color of the node
         node.color = color;
 
-      } else if (update.length === 2 && update[0] === "DELETE") {
+      } else if (update.length === 2 && update[0] == "DELETE") {
         // delete the node at the given index
         const [_, index] = update;
 
         // check if the node already exists
-        node = current_graph.nodes.find(node => node.id === index);
+        var node = current_graph.nodes.find(node => node.id === index);
 
         if (node === undefined) {
           return;
